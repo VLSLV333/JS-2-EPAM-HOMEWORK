@@ -18,15 +18,35 @@
 //   }
 // }
 
+// function forEach(arr, func) {
+//   for (let item of arr) {
+//    func(item);
+//   }
+// }
+
 function forEach(arr, func) {
-  for (let item of arr) {
-    func(item);
+  for (let i = 0; i < arr.length; i++) {
+   func(arr[i]);
   }
 }
-
 // function map(arr, func) {
-
+//   const results = [];
+//   forEach(arr, func);
+//   return results;
 // }
+function map(arr, mapFunc){    
+const mapArr = [];  
+  for(let item of arr) {
+    const result = mapFunc(item);        
+    mapArr.push(result);}    
+    return mapArr;
+}
+
+// function add (part){
+//   return part += 3
+// }
+console.log(map([1, 2, 3, 4, 5], function (el) { return el * 2; }))
+
 
 // function filter(arr, func) {
 
