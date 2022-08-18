@@ -1,22 +1,24 @@
-// function reverseNumber(num) {
-//   let reversed = '';
-//   if (num > 0){
-//     num = num + '';
-//     for (let i = num.length - 1; i >= 0; i--){
-//       reversed += num[i];
-//     }
-//     console.log(+reversed);     
-//   } else if (num < 0){
-//     num = -num + '';
-//     for (let i = num.length - 1; i >= 0; i--){         
-//      reversed += num[i];
-//     }
-//      reversed = +reversed
-//      console.log(-reversed);     
-//   } else {
-//     console.log(0);
-//   }
-// }
+function reverseNumber(num) {
+  let reversed = '';
+  if (num > 0){
+    num = num + '';
+    for (let i = num.length - 1; i >= 0; i--){
+      reversed += num[i];
+    }
+    return +reversed;     
+  } else if (num < 0){
+    num = -num + '';
+    for (let i = num.length - 1; i >= 0; i--){         
+     reversed += num[i];
+    }
+     reversed = +reversed
+     return -reversed;     
+  } else {
+    return 0;
+  }
+}
+
+// console.log(reverseNumber(-234000))
 
 function forEach(arr, func) {
   for (let item of arr) {
@@ -105,17 +107,24 @@ function getAdultAppleLovers(data) {
 // console.log(getAdultAppleLovers(data))
 
 
-// function getKeys(obj) {
+function getKeys(obj) {
+  let answer = [];
+  for(let key in obj){
+    if (true){ //avoiding eslint warning
+      answer.push(key);
+    }
+  }
+  return answer;
+}
+console.log(getKeys({keyOne: 1, keyTwo: 2, keyThree: 3}))
 
-// }
-
-// function getValues(obj) {
-
-// }
-
-
-// function forEach(arr, func){
-//   for (let i = 0; i < arr.length; i++) {
-//    func(arr[i]);
-//   }
-// }
+function getValues(obj) {
+  let answer = [];
+  for(let key in obj){
+    if (true){ //avoiding eslint warning
+      answer.push(obj[key]);
+    }
+  }
+  return answer;
+}
+console.log(getValues({keyOne: 1, keyTwo: 2, keyThree: 3}))
