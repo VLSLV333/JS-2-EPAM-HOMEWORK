@@ -17,15 +17,11 @@ function reverseNumber(num) {
     return 0;
   }
 }
-
-// console.log(reverseNumber(-234000))
-
 function forEach(arr, func) {
   for (let item of arr) {
    func(item);
   }
 }
-
 function map(arr, func) {
   const result = [];
   function addModifiedElToArray(el) {
@@ -34,8 +30,6 @@ function map(arr, func) {
   forEach(arr, addModifiedElToArray);
   return result;
 }
-
-
 function filter(arr, func) {
   const result = [];
   function addFilteredElToArray(el) {
@@ -46,50 +40,6 @@ function filter(arr, func) {
   forEach(arr, addFilteredElToArray);
   return result;
 }
-
-// let data = 
-//   [
-//     {
-//     "_id": "5b5e3168c6bf40f2c1235cd6",
-//     "index": 0,
-//     "age": 39,
-//     "eyeColor": "green",
-//     "name": "Stein",
-//     "favoriteFruit": "apple"
-//     },
-//     {
-//     "_id": "5b5e3168e328c0d72e4f27d8","index": 1,
-//     "age": 38,
-//     "eyeColor": "blue",
-//     "name": "Cortez",
-//     "favoriteFruit": "strawberry"
-//     },
-//     {
-//     "_id": "5b5e3168cc79132b631c666a",
-//     "index": 2,
-//     "age": 2,
-//     "eyeColor": "blue",
-//     "name": "Suzette",
-//     "favoriteFruit": "apple"
-//     },
-//     {
-//     "_id": "5b5e31682093adcc6cd0dde5",
-//     "index": 3,
-//     "age": 17,
-//     "eyeColor": "green",
-//     "name": "Weiss",
-//     "favoriteFruit": "banana"
-//     },
-//     {
-//     "_id": "5b5e3168209323123zxcc6cd0dde5",
-//     "index": 6,
-//     "age": 20,
-//     "eyeColor": "green",
-//     "name": "Yuliana",
-//     "favoriteFruit": "strawberry"
-//     }
-//     ]
-
 function getAdultAppleLovers(data) {
   let requiredAge = 18;
   function requirmentsForObjects (el) {
@@ -104,9 +54,6 @@ function getAdultAppleLovers(data) {
  finalAnswer = map(objectsWhichFit, whichParametrToReturn);
   return finalAnswer
 }
-// console.log(getAdultAppleLovers(data))
-
-
 function getKeys(obj) {
   let answer = [];
   for(let key in obj){
@@ -116,8 +63,6 @@ function getKeys(obj) {
   }
   return answer;
 }
-console.log(getKeys({keyOne: 1, keyTwo: 2, keyThree: 3}))
-
 function getValues(obj) {
   let answer = [];
   for(let key in obj){
@@ -127,4 +72,3 @@ function getValues(obj) {
   }
   return answer;
 }
-console.log(getValues({keyOne: 1, keyTwo: 2, keyThree: 3}))
